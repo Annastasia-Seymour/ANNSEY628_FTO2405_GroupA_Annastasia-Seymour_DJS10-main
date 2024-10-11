@@ -30,14 +30,14 @@ function App() {
     <div className='App-header'>
       <h1>Posts</h1>
       <ol> {/* Ordered list for numbered items */}
-        {posts.slice(0, 4).map(post => ( // Display first 4 posts
-          <div key={post.id} className='post'>
-            <li>
-               <h3>{post.title}</h3>
-               <p>{post.body}</p>
-            </li>
-          </div>
-        ))}
+      {posts.map(post => ( // Display all posts
+    <div key={post.id} className='post'>
+      <li>
+        <h3>{post.title}</h3>
+        <p>{post.body}</p>
+      </li>
+    </div>
+  ))}
       </ol>
     </div>
   );
